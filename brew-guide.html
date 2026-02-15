@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Brewverage Haven | Brew Guide</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>☕ Brewverage Haven</h1>
+            <p>Premium Coffee Experience in Ghana</p>
+        </div>
+        <div class="nav-toggle" onclick="toggleMenu()">☰ Menu</div>
+        <nav>
+            <ul id="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="coffee-selection.html">Coffee Selection</a></li>
+                <li><a href="brew-guide.html" class="active">Brew Guide</a></li>
+                <li><a href="coffee-shop.html">Our Shop</a></li>
+                <li><a href="contact.html">Contact & Events</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="page-header">
+            <h2>Brew Guide</h2>
+            <p>Master the art of brewing the perfect cup at home</p>
+        </div>
+
+        <figure>
+            <img src="https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Brewing coffee" style="width:100%; border-radius:8px;" loading="lazy">
+            <figcaption>The perfect pour-over technique</figcaption>
+        </figure>
+
+        <div class="brew-grid">
+            <div class="brew-card">
+                <h3>☕ Pour-Over Method</h3>
+                <img src="https://images.pexels.com/photos/374757/pexels-photo-374757.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Pour over" class="brew-img" loading="lazy">
+                <div class="brew-details">
+                    <h4>Equipment Needed:</h4>
+                    <ul>
+                        <li>Pour-over dripper (V60 or Chemex)</li>
+                        <li>Paper filter</li>
+                        <li>Gooseneck kettle</li>
+                        <li>Fresh coffee (medium grind)</li>
+                        <li>Scale and timer</li>
+                    </ul>
+                    <h4>Steps:</h4>
+                    <ol>
+                        <li>Heat water to 96°C</li>
+                        <li>Rinse filter with hot water</li>
+                        <li>Add 15g coffee (medium grind)</li>
+                        <li>Bloom with 30ml water for 30 seconds</li>
+                        <li>Pour slowly in circles to 250ml total</li>
+                        <li>Total brew time: 2:30 - 3 minutes</li>
+                    </ol>
+                    <p class="tip">💡 Best for: Light to medium roasts</p>
+                </div>
+            </div>
+
+            <div class="brew-card">
+                <h3>🇫🇷 French Press</h3>
+                <img src="https://images.pexels.com/photos/434213/pexels-photo-434213.jpeg?auto=compress&cs=tinysrgb&w=600" alt="French press" class="brew-img" loading="lazy">
+                <div class="brew-details">
+                    <h4>Equipment Needed:</h4>
+                    <ul>
+                        <li>French press</li>
+                        <li>Kettle</li>
+                        <li>Coarse ground coffee</li>
+                        <li>Wooden spoon</li>
+                    </ul>
+                    <h4>Steps:</h4>
+                    <ol>
+                        <li>Add 30g coarse ground coffee</li>
+                        <li>Pour 350ml water at 94°C</li>
+                        <li>Stir gently</li>
+                        <li>Steep for 4 minutes</li>
+                        <li>Press plunger slowly</li>
+                        <li>Pour immediately</li>
+                    </ol>
+                    <p class="tip">💡 Best for: Dark roasts, full body</p>
+                </div>
+            </div>
+
+            <div class="brew-card">
+                <h3>🧊 Cold Brew</h3>
+                <img src="https://images.pexels.com/photos/1547190/pexels-photo-1547190.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Cold brew" class="brew-img" loading="lazy">
+                <div class="brew-details">
+                    <h4>Equipment Needed:</h4>
+                    <ul>
+                        <li>Large jar or cold brew maker</li>
+                        <li>Coarse ground coffee</li>
+                        <li>Fine mesh strainer</li>
+                        <li>Filter paper</li>
+                    </ul>
+                    <h4>Steps:</h4>
+                    <ol>
+                        <li>Mix 100g coffee with 500ml cold water</li>
+                        <li>Stir to saturate all grounds</li>
+                        <li>Cover and refrigerate for 12-16 hours</li>
+                        <li>Strain through fine mesh</li>
+                        <li>Dilute 1:1 with water or milk</li>
+                        <li>Serve over ice</li>
+                    </ol>
+                    <p class="tip">💡 Keeps for up to 2 weeks in fridge</p>
+                </div>
+            </div>
+        </div>
+
+        <section class="calculator-section">
+            <h3>⚖️ Coffee-to-Water Calculator</h3>
+            <div class="calculator">
+                <div class="form-group">
+                    <label for="cups">Number of Cups:</label>
+                    <input type="number" id="cups" min="1" max="12" value="2">
+                </div>
+                <div class="form-group">
+                    <label for="strength">Strength Preference:</label>
+                    <select id="strength">
+                        <option value="15">Mild (1:15 ratio)</option>
+                        <option value="16" selected>Medium (1:16 ratio)</option>
+                        <option value="17">Strong (1:17 ratio)</option>
+                    </select>
+                </div>
+                <button onclick="calculateCoffee()" class="btn">Calculate</button>
+                
+                <div id="calc-result" class="calc-result" style="display:none;">
+                    <h4>You'll need:</h4>
+                    <p id="coffee-amount"></p>
+                    <p id="water-amount"></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Brewverage Haven</h4>
+                <p>📍 Tesano, Accra<br>📞 +233 20 123 4567<br>✉️ hello@breweragehaven.com</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="coffee-selection.html">Coffee Selection</a></li>
+                    <li><a href="brew-guide.html">Brew Guide</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Hours</h4>
+                <ul>
+                    <li>Mon-Fri: 7am - 8pm</li>
+                    <li>Sat: 8am - 9pm</li>
+                    <li>Sun: 9am - 6pm</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2026 Brewverage Haven | Student: OHENEBA BANKA KWAME (2425400253)</p>
+        </div>
+    </footer>
+
+    <button id="scroll-top-btn" onclick="scrollToTop()">↑ Top</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
