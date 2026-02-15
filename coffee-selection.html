@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Brewverage Haven | Coffee Selection</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>☕ Brewverage Haven</h1>
+            <p>Premium Coffee Experience in Ghana</p>
+        </div>
+        <div class="nav-toggle" onclick="toggleMenu()">☰ Menu</div>
+        <nav>
+            <ul id="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="coffee-selection.html" class="active">Coffee Selection</a></li>
+                <li><a href="brew-guide.html">Brew Guide</a></li>
+                <li><a href="coffee-shop.html">Our Shop</a></li>
+                <li><a href="contact.html">Contact & Events</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="page-header">
+            <h2>Our Coffee Selection</h2>
+            <p>Discover our range of premium single-origin and blended coffees</p>
+        </div>
+
+        <figure>
+            <img src="https://images.pexels.com/photos/905485/pexels-photo-905485.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Coffee beans variety" style="width:100%; border-radius:8px;" loading="lazy">
+            <figcaption>Our carefully selected coffee beans from around the world</figcaption>
+        </figure>
+
+        <div class="coffee-grid">
+            <div class="coffee-card">
+                <img src="https://images.pexels.com/photos/1695052/pexels-photo-1695052.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Volta Gold coffee" class="coffee-img" loading="lazy">
+                <h3>🇬🇭 Volta Gold</h3>
+                <p class="origin">Single Origin • Volta Region</p>
+                <p class="description">Notes of chocolate, citrus, and honey. Medium roast with bright acidity.</p>
+                <p class="price">GHS 85 / 250g</p>
+                <button class="btn add-to-cart" onclick="addToCart('Volta Gold')">Add to Cart</button>
+            </div>
+
+            <div class="coffee-card">
+                <img src="https://images.pexels.com/photos/4201341/pexels-photo-4201341.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Ethiopian Yirgacheffe" class="coffee-img" loading="lazy">
+                <h3>🇪🇹 Ethiopian Yirgacheffe</h3>
+                <p class="origin">Single Origin • Ethiopia</p>
+                <p class="description">Floral and tea-like with jasmine and bergamot notes. Light roast.</p>
+                <p class="price">GHS 95 / 250g</p>
+                <button class="btn add-to-cart" onclick="addToCart('Ethiopian Yirgacheffe')">Add to Cart</button>
+            </div>
+
+            <div class="coffee-card">
+                <img src="https://images.pexels.com/photos/4332564/pexels-photo-4332564.jpeg?auto=compress&cs=tinysrgb&w=600" alt="House Blend" class="coffee-img" loading="lazy">
+                <h3>🏠 House Blend</h3>
+                <p class="origin">Signature Blend • Ghana/Colombia</p>
+                <p class="description">Balanced with chocolate, nuts, and caramel. Medium-dark roast.</p>
+                <p class="price">GHS 75 / 250g</p>
+                <button class="btn add-to-cart" onclick="addToCart('House Blend')">Add to Cart</button>
+            </div>
+
+            <div class="coffee-card">
+                <img src="https://images.pexels.com/photos/982612/pexels-photo-982612.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Colombian Supremo" class="coffee-img" loading="lazy">
+                <h3>🇨🇴 Colombian Supremo</h3>
+                <p class="origin">Single Origin • Colombia</p>
+                <p class="description">Rich, full-bodied with nutty and fruity notes. Medium roast.</p>
+                <p class="price">GHS 90 / 250g</p>
+                <button class="btn add-to-cart" onclick="addToCart('Colombian Supremo')">Add to Cart</button>
+            </div>
+
+            <div class="coffee-card">
+                <img src="https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Espresso Blend" class="coffee-img" loading="lazy">
+                <h3>🔥 Espresso Blend</h3>
+                <p class="origin">Signature Blend • Dark Roast</p>
+                <p class="description">Intense, syrupy with dark chocolate and caramel. Perfect for espresso.</p>
+                <p class="price">GHS 80 / 250g</p>
+                <button class="btn add-to-cart" onclick="addToCart('Espresso Blend')">Add to Cart</button>
+            </div>
+
+            <div class="coffee-card">
+                <img src="https://images.pexels.com/photos/1580152/pexels-photo-1580152.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Decaf" class="coffee-img" loading="lazy">
+                <h3>🌙 Swiss Water Decaf</h3>
+                <p class="origin">Decaffeinated • Colombia</p>
+                <p class="description">All flavor, no caffeine. Smooth with chocolate notes.</p>
+                <p class="price">GHS 88 / 250g</p>
+                <button class="btn add-to-cart" onclick="addToCart('Swiss Water Decaf')">Add to Cart</button>
+            </div>
+        </div>
+
+        <div id="cart-message" class="cart-message"></div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Brewverage Haven</h4>
+                <p>📍 Tesano, Accra<br>📞 +233 20 123 4567<br>✉️ hello@breweragehaven.com</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="coffee-selection.html">Coffee Selection</a></li>
+                    <li><a href="brew-guide.html">Brew Guide</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <ul>
+                    <li>Instagram: @breweragehaven</li>
+                    <li>Facebook: /breweragehaven</li>
+                    <li>Twitter: @brewhaven_gh</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2026 Brewverage Haven | Student: OHENEBA BANKA KWAME (2425400253)</p>
+        </div>
+    </footer>
+
+    <button id="scroll-top-btn" onclick="scrollToTop()">↑ Top</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
