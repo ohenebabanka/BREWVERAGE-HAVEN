@@ -119,4 +119,84 @@
                         <tr>
                             <td>Feb 25, 2026</td>
                             <td>Introduction to Pour-Over</td>
-                            <td>10
+                            <td>10am - 12pm</td>
+                            <td>GHS 50</td>
+                        </tr>
+                        <tr>
+                            <td>Feb 28, 2026</td>
+                            <td>Live Music Night</td>
+                            <td>6pm - 8pm</td>
+                            <td>Free</td>
+                        </tr>
+                        <tr>
+                            <td>March 3, 2026</td>
+                            <td>Coffee Tasting: Volta Gold</td>
+                            <td>3pm - 4pm</td>
+                            <td>GHS 30</td>
+                        </tr>
+                        <tr>
+                            <td>March 7, 2026</td>
+                            <td>Latte Art Workshop</td>
+                            <td>10am - 1pm</td>
+                            <td>GHS 80</td>
+                        </tr>
+                        <tr>
+                            <td>March 10, 2026</td>
+                            <td>Brewing Competition</td>
+                            <td>2pm - 5pm</td>
+                            <td>Free entry</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="event-note">
+                <p>✨ All events held at our Tesano location. Limited spots available.</p>
+                <button onclick="document.getElementById('subject').value='event'" class="btn">Register for Event</button>
+            </div>
+        </section>
+
+        <section class="newsletter-section">
+            <h3>📧 Subscribe to Our Newsletter</h3>
+            <p>Get updates on new coffees, events, and brewing tips</p>
+            <form onsubmit="return subscribeNewsletter(event)" class="newsletter-form">
+                <input type="email" id="newsletter-email" placeholder="Your email address" required>
+                <button type="submit" class="btn">Subscribe</button>
+            </form>
+            <div id="newsletter-feedback" class="form-feedback"></div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Brewverage Haven</h4>
+                <p>📍 Tesano, Accra<br>📞 +233 20 123 4567<br>✉️ hello@breweragehaven.com</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="coffee-selection.html">Coffee Selection</a></li>
+                    <li><a href="brew-guide.html">Brew Guide</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Hours</h4>
+                <ul>
+                    <li>Mon-Fri: 7am - 8pm</li>
+                    <li>Sat: 8am - 9pm</li>
+                    <li>Sun: 9am - 6pm</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2026 Brewverage Haven | Student: OHENEBA BANKA KWAME (2425400253)</p>
+        </div>
+    </footer>
+
+    <button id="scroll-top-btn" onclick="scrollToTop()">↑ Top</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
